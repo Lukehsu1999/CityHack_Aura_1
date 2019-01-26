@@ -1,0 +1,19 @@
+#explore, #recommend{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+
+}
+#explore img{
+  display: inline-block;
+width: 60%;
+margin-top: 5%;
+}
+
+.content{
+  padding: 10%;
+}
+ #explore>p{
+   text-align: center;
+ }
