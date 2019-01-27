@@ -2,12 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
       <script>
-
       String.isNullOrEmpty=function(string)
     {
       return (!string || string == undefined || string.trim() == "" || string.length == 0);
     }
-
       function addHike()
       {
         hike={
@@ -19,10 +17,8 @@
           additionalNotes: document.querySelector("#additionalNotes").value
         };
         sifra=document.querySelector("#sifra").value;
-        alert(hike);
         localStorage.setItem(sifra,JSON.stringify(hike));
       }
-
       function informationValidation()
     {
       var test=true;
@@ -35,19 +31,19 @@
       }
       if(!test)
       {
-        alert("Greska");
-        //document.querySelector(".Error_Block").style.display="block";
-        //document.querySelector(".Page").style.opacity=0.1;
+        document.querySelector(".Error_Block").style.display="block";
+        document.querySelector(".Page").style.opacity=0.1;
       }
       else
         addHike();
     }
-
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Hike</title>
-    <link rel="stylesheet" href="../css/addHikes.css">
+   <link rel="stylesheet" href="../css/Default.css" type="text/css" media="all">
+<link rel="stylesheet" href="../css/AddHikes.css" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
   </head>
   <body>
    <div class="Error_Block">
@@ -57,14 +53,30 @@
     </div>
 
     <div class=".Page">
-
-
     <header>
-          <img src="../images/cityulogo.jpg" alt="logo of City University of Hong Kong">
+          <img src="../images/cityulogo.png" alt="logo of City University of Hong Kong">
+          <h1>CityU Hikethon</h1>
         </header>
+        <div class="main">
+          <div id="pinkDiv" >
+      pink
+          </div>
+          <div id="personal"  >
 
-        <div id="Content">
-
+      <ul>
+        <li>
+          <a href="#"><img id="person" src="../images/person1.png" width="10%" alt="account" title="My account"></a>
+          <p id="logout">
+            <a href="#">Log out</a>
+            </p>
+        </li>
+        <li><a href="#"><img src="../images/myhikes.png"  alt="my hikes" title="My Hikes"></a></li>
+        <li><a href="#"><img src="../images/joinhike.png"  alt="join hikes" title="Join existing hike"></a></li>
+        <li><a href="#"><img src="../images/addhike.png"  alt="add hike" title="Add hike"></a></li>
+        <li><a href="#"><img src="../images/upcoming.png"  alt="my upcoming hikes" title="My upcoming hikes"></a></li>
+      </ul>
+          </div>
+<div class="content">
           <label for="Organizer">Organizer</label>
           <input id="organizer" type="text" name="Organizer" value="">
 
@@ -97,11 +109,16 @@
           <button type="button" name="addHike" onclick="location.href='./html1.html';">Back</button>
 
         </div>
-
-        <footer>
-          <a href="http://www6.cityu.edu.hk/it/student.htm" class="footerLinks" tabindex="5">About EID</a>
-          <a href="#" class="footerLinks" tabindex="6">About Us</a>
-          <a href="#" class="footerLinks" tabindex="7">FAQ</a>
-        </footer>
+</div>
+<footer>
+  <p>
+    <a href="HomePage.html">Home</a>
+   <a href="OrderPage.html">Explore existing</a>
+   <a href="OrderPage.html">Add hike</a>
+   <a href="DesignPage.html">About Hikethon</a>
+   <a href="#">Regulations</a>
+  </p>
+</footer>
+</div>
   </body>
 </html>
