@@ -38,12 +38,31 @@ function change(){
   {
     this.innerHTML="Joined";
     this.style.backgroundColor="green";
+    place=this;
+    while(place.className!="place")
+    place=place.previousSibling;
+    arr=document.querySelectorAll("table td label");
+    checkboxes=document.querySelectorAll("table td input");
+    for(i=0;i<arr.length;i++)
+    {
+      if(place.textContent.slice(6).trim()==arr[i].innerHTML.trim())
+      checkboxes[i].checked=true;
+    }
   }
 
   else
   {
     this.innerHTML="JOIN";
     this.style.backgroundColor="red";
+    while(place.className!="place")
+    place=place.previousSibling;
+    arr=document.querySelectorAll("table td label");
+    checkboxes=document.querySelectorAll("table td input");
+    for(i=0;i<arr.length;i++)
+    {
+      if(place.textContent.slice(6).trim()==arr[i].innerHTML.trim())
+      checkboxes[i].checked=false;
+    }
   }
 
 }
