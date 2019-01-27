@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../css/MyHikes.css" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
     <title>My Hikes</title>
-    <script type="text/javascript" src="../js/trail_info.js"></script>
+    <script type="text/javascript" src="../trail_info.js"></script>
 
   </head>
   <body>
@@ -196,7 +196,7 @@
         for (var i = 0; i < 20; i++) {
             var difficult_gap;
             difficult_gap = Math.abs(HKtrail[i].Difficulty - avg_diff);
-            HKtrail[i].Score = view_sum[HKtrail[i].ViewType] + (5.00-difficult_gap)*place_count;
+            HKtrail[i].Score = view_sum[HKtrail[i].ViewType] + (5.00-difficult_gap)*(place_count/4);
         }
         //sort the trails by Score
         var rank=[];
