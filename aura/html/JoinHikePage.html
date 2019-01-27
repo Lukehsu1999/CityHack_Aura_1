@@ -2,43 +2,51 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-    function FillingData()
-    {
-        for (var i = 0; i<localStorage.length; i++)
-        {
-            hike= document.createElement("div");
-            hike.className="hike";
-            objekat=JSON.parse(localStorage.getItem(localStorage.key(i)));
-            names=Object.getOwnPropertyNames(objekat);
-            for(i=0;i<names.length;i++)
-            {
-              alert(names[i]);
-              paragraph=document.createElement("p");
-              paragraph.className=names[i];
-              paragraph.textContent=objekat[names[i]];
-              hike.appendChild(paragraph);
-            }
-            hikeList=document.querySelector("#hikeList");
-            alert(hike);
-            hikeList.appendChild(hike);
-        }
-    }
+  function FillingData()
+  {
+      hikeList=document.querySelector("#content");
+      for (i = 0; i<localStorage.length; i++)
+      {
+          hike= document.createElement("div");
+          hike.className="hike";
+          objekat=JSON.parse(localStorage.getItem(localStorage.key(i)));
+          names=Object.getOwnPropertyNames(objekat);
+          for(j=0;j<names.length;j++)
+          {
+            paragraph=document.createElement("p");
+            paragraph.className=names[j];
+            paragraph.textContent=names[j]+": ";
+            paragraph.textContent+=objekat[names[j]];
+            hike.appendChild(paragraph);
+          }
+          butt=document.createElement("button");
+          butt.name="join";
+          butt.innerHTML="JOIN";
+          butt.onclick=change;
+          hike.appendChild(butt);
+          hikeList.appendChild(hike);
+      }
+  }
+function change(){
+  this.innerHTML="Joined";
+this.style.backgroundColor="green";
+}
 
-    window.onload= function()
-    {
-      FillingData();
-    };
-    </script>
+  window.onload= function()
+  {
+    FillingData();
+  };
+  </script>
     <title>Add Hike</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/Default.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../css/Default.css" type="text/css" media="all">
 <link rel="stylesheet" href="../css/JoinHike.css" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
   </head>
   <body>
- 
+
     <header>
       <img src="../images/cityulogo.png" alt="cityu logo">
       <h1>CityU Hikethon</h1>
@@ -62,7 +70,7 @@
 </ul>
     </div>
 
-    <div id="hikeList" >
+    <div id="content" >
 
     </div>
     </div>
