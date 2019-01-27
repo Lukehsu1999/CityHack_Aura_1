@@ -1,188 +1,51 @@
-/* //////////////////////////////////////////////////////////////////////////////// */
-                            /* reset and general*/
-/* //////////////////////////////////////////////////////////////////////////////// */
-*{
-  margin: 0;
-  padding: 0; 
-
-  font-family: 'Open Sans', sans-serif;
+input,select,textarea{
+  display: block;
+  margin-bottom: 2%;
+  margin-left: 2vw;
+  margin-top: 2%;
+}
+label,textarea{
+  margin-left: 2vw;
 }
 
-#errorBlock{
+button{
+  margin-top: 5%;
+  margin-left: 0;
+  width:20%;
+  background-color:#BF165E;
+  border: none;
+  height: 5vh;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5vh;
+  margin-left: 2vw;
+}
+button:hover {
+  transition: 1.5s;
+  transform: scale(1.2);
+}
+.Error_Block
+{
+  position: fixed;
+  font-size: 3em;
+  left: 50%;
+  width: 50%;
   display: none;
-}
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-                            /* Desktop */
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-@media screen and (orientation: landscape){
-
-    /* //////////////////////////////////////////////////////////////////////////////// */
-
-                  /* header */
-      header{
-        height: 12vh;
-        width: 100vw;
-      }
-      header img{
-          padding: 3px;
-      }
-    /* //////////////////////////////////////////////////////////////////////////////// */
-
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-            /* contentBlock */
-    #Content{
-      width: 80vw;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      background-color: #BF165E;
-    }
-
-    #Content input{
-      display: block;
-      margin: auto;
-      height: 5vh;
-      width: 78vw;
-    }
-
-    #Content > label{
-      color: white;
-      font-size: 2vw
-    }
-
-    #Content textarea{
-      margin: auto;
-      width: 78vw;
-    }
-
-    #Content button{
-      background: #0B0F1A;
-    }
-    /* #Content:nth-child(2n){
-      clear: right;
-    } */
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-
-    /* //////////////////////////////////////////////////////////////////////////////// */
-                    /* footer */
-
-    footer{
-      position: absolute;
-      bottom: 0px;
-      width: 100vw;
-      height: 16vh;
-
-      display: flex;
-      justify-content: space-around;
-
-      background-color: #0B0F1A;
-    }
-
-    footer a{
-      padding-top: 2vh;
-
-      color: white;
-    }
-
-    /* //////////////////////////////////////////////////////////////////////////////// */
-
+  z-index: 5;
+  background-color: white;
+  margin-top: 10%;
+  border-radius: 0.5em;
+  border: solid #BF165E ;
+  padding-left: 1em;
+  padding-right: 1em;
+  transform: translate(-50%,-50%);
 }
 
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-                            /* End Desktop */
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-                            /* Mobile */
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-@media screen and (orientation: portrait){
-
-    /* //////////////////////////////////////////////////////////////////////////////// */
-
-                /* header */
-    header{
-      height: 17vh;
-      width: 100vw;
-    }
-    header img{
-        width: 27vw;
-        height: 15vh;
-        padding: 3px;
-    }
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-
-
-                /* contentBlock */
-        #Content{
-          width: 80vw;
-          margin: auto;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          background-color: #BF165E;
-        }
-
-        #Content input{
-          display: block;
-          margin: auto;
-          height: 5vh;
-          width: 78vw;
-        }
-
-        #Content > label{
-          color: white;
-          font-size: 2vh;
-        }
-
-        #Content textarea{
-          margin: auto;
-          width: 78vw;
-        }
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-                /* footer */
-
-    footer{
-      position: absolute;
-      bottom: 0px;
-      width: 100vw;
-      height: 16vh;
-
-      display: flex;
-      justify-content: space-around;
-
-      background-color: #0B0F1A;
-    }
-
-    footer a{
-      padding-top: 2vh;
-
-      color: white;
-    }
-
-    /* //////////////////////////////////////////////////////////////////////////////// */
-
+.Error_Block p
+{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
 }
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
-                            /*End Mobile */
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////// */
