@@ -29,9 +29,21 @@
           hikeList.appendChild(hike);
       }
   }
-function change(){
-  this.innerHTML="Joined";
-this.style.backgroundColor="green";
+
+      function change(){
+
+  if(this.style.backgroundColor=="red")
+  {
+    this.innerHTML="Joined";
+    this.style.backgroundColor="green";
+  }
+
+  else
+  {
+    this.innerHTML="JOIN";
+    this.style.backgroundColor="red";
+  }
+
 }
 
   window.onload= function()
