@@ -37,6 +37,14 @@
       else
         addHike();
     }
+
+    function disappear()
+    {
+      document.querySelector(".Error_Block").style.display="none";
+      document.querySelector(".Page").style.opacity=1;
+    }
+
+
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,13 +54,14 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
   </head>
   <body>
-   <div class="Error_Block">
+
+   <div class="Error_Block" onclick="disappear();">
 
       <p>Input mistake</p>
 
     </div>
 
-    <div class=".Page">
+    <div class="Page">
     <header>
           <img src="../images/cityulogo.png" alt="logo of City University of Hong Kong">
           <h1>CityU Hikethon</h1>
@@ -122,3 +131,4 @@
 </div>
   </body>
 </html>
+
